@@ -95,3 +95,7 @@ String where = String.format("%s = ? AND %s = ?", RepositoryContract.Columns.USE
 
 repositories.upsert(values, where, String.valueOf(userId), name);
 ```
+
+## Sample usage
+
+Here is a functional project built using QueryDB: [Testable Android](https://github.com/explodes/testable-android)
