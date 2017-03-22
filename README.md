@@ -1,4 +1,4 @@
-# query-db
+# query-db [![Build Status](https://travis-ci.org/explodes/query-db.svg?branch=master)](https://travis-ci.org/explodes/query-db)
 
 Sqlite wrapper for Android's SQLiteOpenHelper.
 
