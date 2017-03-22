@@ -1,4 +1,4 @@
-# query-db [![Build Status](https://travis-ci.org/explodes/query-db.svg?branch=master)](https://travis-ci.org/explodes/query-db) [![GitHub issues](https://img.shields.io/github/issues/explodes/query-db.svg)](https://github.com/explodes/query-db/issues) [![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg)](https://github.com/explodes/query-db) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/explodes/query-db/master/LICENSE) 
+# query-db [![Build Status](https://travis-ci.org/explodes/query-db.svg?branch=master)](https://travis-ci.org/explodes/query-db) [![GitHub issues](https://img.shields.io/github/issues/explodes/query-db.svg)](https://github.com/explodes/query-db/issues) [![GitHub release](https://img.shields.io/github/release/explodes/query-db.svg)]() [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/explodes/query-db/master/LICENSE) 
 
 Sqlite wrapper for Android's SQLiteOpenHelper.
 
