@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.explodes:query-db:1.0.1'
+    compile "com.github.explodes:query-db:${latestQueryDbRelease}"
 }
 ```
 
