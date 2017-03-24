@@ -69,11 +69,6 @@ public class QueryDbTest {
 			super(RuntimeEnvironment.application, name, null, version);
 		}
 
-		@Override
-		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-			super.onUpgrade(db, oldVersion, newVersion);
-		}
-
 		@Nullable
 		@Override
 		protected Migration getMigration(final int version) {
