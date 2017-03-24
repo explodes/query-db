@@ -10,17 +10,14 @@ import android.support.annotation.Nullable;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 
 import java.util.List;
 
-import io.explod.querydb.BuildConfig;
 import io.explod.querydb.db.Migration;
 import io.explod.querydb.db.QueryDb;
 import io.explod.querydb.util.CursorUtils;
+import meta.BaseRoboTest;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
@@ -29,9 +26,7 @@ import static junit.framework.Assert.assertNotSame;
 import static junit.framework.Assert.assertNull;
 import static junit.framework.Assert.assertTrue;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class)
-public class QueryTableTest {
+public class QueryTableTest extends BaseRoboTest {
 
 	private static class TestDatabase extends QueryDb {
 

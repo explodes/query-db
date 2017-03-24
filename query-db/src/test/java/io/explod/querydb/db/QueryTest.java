@@ -2,20 +2,15 @@ package io.explod.querydb.db;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
 
-import io.explod.querydb.BuildConfig;
+import meta.BaseRoboTest;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNull;
 import static junit.framework.Assert.assertSame;
 import static junit.framework.Assert.assertTrue;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class)
-public class QueryTest {
+public class QueryTest extends BaseRoboTest {
 
 	Query<Query> query;
 

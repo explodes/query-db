@@ -5,11 +5,8 @@ import android.content.ContentValues;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
 
-import io.explod.querydb.BuildConfig;
+import meta.BaseRoboTest;
 import meta.TestQueryDb;
 
 import static org.junit.Assert.assertEquals;
@@ -19,9 +16,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class)
-public class QueryWithValuesTest {
+public class QueryWithValuesTest extends BaseRoboTest {
 
 	TestQueryDb db;
 	QueryWithValues<QueryWithValues> query;

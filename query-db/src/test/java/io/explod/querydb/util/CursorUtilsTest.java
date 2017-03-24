@@ -7,21 +7,16 @@ import android.database.MatrixCursor;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
 
 import java.util.Date;
 
-import io.explod.querydb.BuildConfig;
+import meta.BaseRoboTest;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class)
-public class CursorUtilsTest {
+public class CursorUtilsTest extends BaseRoboTest {
 
 
 	Date now = new Date();

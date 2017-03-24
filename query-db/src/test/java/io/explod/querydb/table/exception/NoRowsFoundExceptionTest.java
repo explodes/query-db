@@ -2,9 +2,11 @@ package io.explod.querydb.table.exception;
 
 import org.junit.Test;
 
+import meta.BaseRoboTest;
+
 import static junit.framework.Assert.assertNotNull;
 
-public class NoRowsFoundExceptionTest {
+public class NoRowsFoundExceptionTest extends BaseRoboTest {
 
 	@Test
 	public void init() {

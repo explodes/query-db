@@ -3,18 +3,13 @@ package io.explod.querydb.db;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
 
-import io.explod.querydb.BuildConfig;
+import meta.BaseRoboTest;
 import meta.TestQueryDb;
 
 import static org.junit.Assert.assertNotEquals;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class)
-public class InsertTest {
+public class InsertTest extends BaseRoboTest {
 
 	TestQueryDb db;
 	Insert query;

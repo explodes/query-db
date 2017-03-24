@@ -7,23 +7,18 @@ import android.support.annotation.Nullable;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.explod.querydb.BuildConfig;
+import meta.BaseRoboTest;
 import meta.TestQueryDb;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class)
-public class QueryDbTest {
+public class QueryDbTest extends BaseRoboTest {
 
 	TestQueryDb db;
 

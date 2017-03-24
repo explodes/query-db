@@ -3,17 +3,12 @@ package io.explod.querydb.table.exception;
 import android.content.ContentValues;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
 
-import io.explod.querydb.BuildConfig;
+import meta.BaseRoboTest;
 
 import static junit.framework.Assert.assertNotNull;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class)
-public class CreateFailedExceptionTest {
+public class CreateFailedExceptionTest extends BaseRoboTest {
 
 	@Test
 	public void init() {
