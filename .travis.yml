@@ -10,4 +10,4 @@ jdk:
   - oraclejdk8
 
 script:
-  - ./gradlew test --stacktrace
+  - ./gradlew test --stacktrace --info
