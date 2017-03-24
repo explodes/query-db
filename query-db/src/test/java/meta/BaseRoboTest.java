@@ -7,6 +7,6 @@ import org.robolectric.annotation.Config;
 import io.explod.querydb.BuildConfig;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = Config.ALL_SDKS)
+@Config(constants = BuildConfig.class)
 public abstract class BaseRoboTest {
 }
