@@ -1,4 +1,7 @@
 language: android
+
+jdk: oraclejdk8
+
 android:
   components:
     - platform-tools
@@ -6,8 +9,16 @@ android:
     - build-tools-25.0.2
     - android-25
     - extra-android-m2repository
-jdk:
-  - oraclejdk8
 
 script:
-  - ./gradlew test --stacktrace --info
+  - ./gradlew test --stacktrace
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.android/build-cache
