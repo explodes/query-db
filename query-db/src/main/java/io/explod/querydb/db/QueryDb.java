@@ -15,25 +15,18 @@ public abstract class QueryDb extends SQLiteOpenHelper {
 
 	private final int mVersion;
 
-	public QueryDb(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+	public QueryDb(@NonNull Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
 		super(context, name, factory, version);
 		mVersion = version;
-		init();
 	}
 
-	public QueryDb(Context context, String name, SQLiteDatabase.CursorFactory factory, int version, DatabaseErrorHandler errorHandler) {
+	public QueryDb(@NonNull Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version, @Nullable DatabaseErrorHandler errorHandler) {
 		super(context, name, factory, version, errorHandler);
 		mVersion = version;
-		init();
-	}
-
-	private void init() {
-		SQLiteDatabase db = super.getWritableDatabase();
-		db.enableWriteAheadLogging();
 	}
 
 	@Override
-	public void onCreate(SQLiteDatabase db) {
+	public void onCreate(@NonNull SQLiteDatabase db) {
 		Migration initial = getMigration(VERSION_INITIAL);
 		if (initial == null) {
 			throw new SQLiteException("No initial migration");
@@ -46,7 +39,7 @@ public abstract class QueryDb extends SQLiteOpenHelper {
 	}
 
 	@Override
-	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+	public void onUpgrade(@NonNull SQLiteDatabase db, int oldVersion, int newVersion) {
 		for (int version = oldVersion + 1; version <= newVersion; version++) {
 			Migration migration = getMigration(version);
 			if (migration != null) {
