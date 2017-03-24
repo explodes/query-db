@@ -92,7 +92,7 @@ public class QueryDbTest {
 		TrackedMigrationsDb db = null;
 		try {
 			db = new TrackedMigrationsDb(1);
-			db.getWritableDatabase();
+			db.getReadableDatabase();
 
 			assertEquals(1, db.mMigrations.size());
 			assertEquals(Integer.valueOf(1), db.mMigrations.get(0));
@@ -107,7 +107,7 @@ public class QueryDbTest {
 		TrackedMigrationsDb db = null;
 		try {
 			db = new TrackedMigrationsDb(4);
-			db.getWritableDatabase();
+			db.getReadableDatabase();
 
 			assertEquals(4, db.mMigrations.size());
 			assertEquals(Integer.valueOf(1), db.mMigrations.get(0));
@@ -126,7 +126,7 @@ public class QueryDbTest {
 		TrackedMigrationsDb db = null;
 		try {
 			db = new TrackedMigrationsDb("file.db", 1);
-			db.getWritableDatabase();
+			db.getReadableDatabase();
 
 			assertEquals(1, db.mMigrations.size());
 			assertEquals(Integer.valueOf(1), db.mMigrations.get(0));
@@ -138,7 +138,7 @@ public class QueryDbTest {
 		// test version upgrade is run
 		try {
 			db = new TrackedMigrationsDb("file.db", 2);
-			db.getWritableDatabase();
+			db.getReadableDatabase();
 
 			assertEquals(1, db.mMigrations.size());
 			assertEquals(Integer.valueOf(2), db.mMigrations.get(0));
@@ -151,7 +151,7 @@ public class QueryDbTest {
 		// test multiple version upgrades are run
 		try {
 			db = new TrackedMigrationsDb("file.db", 4);
-			db.getWritableDatabase();
+			db.getReadableDatabase();
 
 			assertEquals(2, db.mMigrations.size());
 			assertEquals(Integer.valueOf(3), db.mMigrations.get(0));
